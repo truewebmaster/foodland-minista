@@ -1,0 +1,62 @@
+import './HeroCard.scss'
+import clsx from 'clsx'
+import Icon from "@/components/Icon/index.js";
+import { Image } from "minista";
+import AuthorCard from "@/components/AuthorCard/index.js";
+
+export default (props) => {
+  const {
+    className,
+    title,
+    TitleTag = 'h2',
+    category,
+    description,
+    tags = [],
+    author,
+    imgSrc,
+  } = props
+
+  return (
+    <div
+      className={clsx('hero-card', className)}
+    >
+      <div className="hero-card__body">
+        <header className="hero-card__category">
+          <Image
+            className="hero-card__category-image"
+            src={category.imgSrc}
+          />
+          <span>{category.label}</span>
+        </header>
+        <TitleTag className="hero-card__title">
+          {title}
+        </TitleTag>
+        <div className="hero-card__description">
+          <p>{description}</p>
+        </div>
+        <div className="hero-card__tags">
+          <ul className="hero-card__tags-list">
+            {tags.map(({iconName, label}) => (
+              <li className="hero-card__tags-item">
+                <Icon name={iconName}/>
+                <span>{label}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <footer className="hero-card__footer">
+          <AuthorCard
+            className="hero-card__author"
+            {...author}
+          />
+        </footer>
+      </div>
+      <Image
+        className="hero-card__image"
+        src={imgSrc}
+        // width={660}
+        // height={640}
+      />
+    </div>
+  )
+}
