@@ -146,12 +146,6 @@ npm run lint:fix      # Полная проверка с автоисправл�
 
 Если нашли баг или хотите предложить улучшение — открывайте issue или присылайте pull request.
 
-GitHub: https://github.com/aleksanderlamkov/friendly-frontend-starter
-
-## Лицензия
-
-MIT
-
----
-
-**Автор:** [Александр Ламков](https://www.youtube.com/@AleksanderLamkov)
+GitHub: https://github.com/truewebmaster/Foodland-.git
+#   F o o d l a n d -  
+ 
