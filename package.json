@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/truewebmaster/foodland.git"
+    "url": "https://github.com/truewebmaster/foodland-minista.git"
   },
   "type": "module",
   "scripts": {
