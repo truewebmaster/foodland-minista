@@ -18,46 +18,41 @@ export default (props) => {
   } = props
 
   return (
-    <div
-      className={clsx('hero-card', className)}
-    >
+    <div className={clsx('hero-card', className)}>
       <div className="hero-card__body">
         <header className="hero-card__category">
-          <Image
-            className="hero-card__category-image"
-            src={category.imgSrc}
-          />
+          <Image className="hero-card__category-image" src={category.imgSrc} />
           <span>{category.label}</span>
         </header>
-        <TitleTag className="hero-card__title">
-          {title}
-        </TitleTag>
+        <TitleTag className="hero-card__title">{title}</TitleTag>
         <div className="hero-card__description">
           <p>{description}</p>
         </div>
         <div className="hero-card__tags">
           <ul className="hero-card__tags-list">
-            {tags.map(({iconName, label}) => (
+            {tags.map(({ iconName, label }) => (
               <li className="hero-card__tags-item">
-                <Icon className name={iconName} hasFill />
+                <Icon name={iconName} hasFill />
                 <span className="hero-card__tags-label">{label}</span>
               </li>
             ))}
           </ul>
         </div>
         <footer className="hero-card__footer">
-          <AuthorCard
-            className="hero-card__author"
-            {...author}
-          />
-          <Button
-            className=""
-            href="/"
-          >
+          <AuthorCard className="hero-card__author" {...author} />
+          <Button className="" href="/">
             <span>View Recipes</span>
             <Icon name="play" hasFill />
           </Button>
         </footer>
+        <img
+          className="hero-card__badge"
+          src="/images/badge.svg"
+          alt="HANDPICKED RECIPES"
+          width={150}
+          height={150}
+          loading="lazy"
+        />
       </div>
       <Image
         className="hero-card__image"
