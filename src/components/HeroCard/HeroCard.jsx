@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import Icon from "@/components/Icon/index.js";
 import { Image } from "minista";
 import AuthorCard from "@/components/AuthorCard/index.js";
+import Button from "@/components/Button/index.js";
 
 export default (props) => {
   const {
@@ -38,8 +39,8 @@ export default (props) => {
           <ul className="hero-card__tags-list">
             {tags.map(({iconName, label}) => (
               <li className="hero-card__tags-item">
-                <Icon name={iconName}/>
-                <span>{label}</span>
+                <Icon className name={iconName} hasFill />
+                <span className="hero-card__tags-label">{label}</span>
               </li>
             ))}
           </ul>
@@ -49,12 +50,19 @@ export default (props) => {
             className="hero-card__author"
             {...author}
           />
+          <Button
+            className=""
+            href="/"
+          >
+            <span>View Recipes</span>
+            <Icon name="play" />
+          </Button>
         </footer>
       </div>
       <Image
         className="hero-card__image"
         src={imgSrc}
-        // width={660}
+        // width={668}
         // height={640}
       />
     </div>

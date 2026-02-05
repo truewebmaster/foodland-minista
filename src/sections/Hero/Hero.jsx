@@ -23,11 +23,11 @@ export default () => {
               description = "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
               tags ={[
                 {
-                  iconName: 'clock',
+                  iconName: 'timer',
                   label: '30 Minutes'
                 },
                 {
-                  iconName: 'fork',
+                  iconName: 'fork-knife',
                   label: 'Chicken'
                 },
               ]}

@@ -11,6 +11,14 @@
     &:not(:last-child) {
       margin-bottom: 32px;
     }
+
+    display: inline-flex;
+    column-gap: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
   }
 
   &__title{
@@ -20,14 +28,37 @@
   }
 
   &__description{
+    color: var(--color-gray-600);
+    line-height: 1.75;
+
     &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
 
-  &__tags{
+  &__tags {
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+
+    &-item {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 10px;
+      background-color: var(--color-gray-50);
+      border-radius: var(--border-radius);
+      padding: 8px 16px;
+    }
+
+    &-label {
+      color: var(--color-gray-600);
     }
   }
 

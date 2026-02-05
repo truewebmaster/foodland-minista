@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AleksanderLamkov/friendly-frontend-starter.git"
+    "url": "https://github.com/truewebmaster/foodland.git"
   },
   "type": "module",
   "scripts": {
