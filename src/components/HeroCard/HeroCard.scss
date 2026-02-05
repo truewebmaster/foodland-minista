@@ -1,10 +1,15 @@
 .hero-card {
   display: grid;
-  grid-template-columns: 48.43% 1fr;
+  grid-template-columns: 48.4375% 1fr;
 
   &__body {
     background-color: var(--color-secondary);
     padding: 50px;
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
   }
 
   &__category {
@@ -19,6 +24,7 @@
     padding: 10px 20px;
     background-color: var(--color-white);
     border-radius: var(--border-radius);
+    box-shadow: var(--drop-shadow);
   }
 
   &__title{
@@ -63,6 +69,10 @@
   }
 
   &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
     margin-top: auto;
   }
 }

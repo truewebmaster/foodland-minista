@@ -55,15 +55,15 @@ export default (props) => {
             href="/"
           >
             <span>View Recipes</span>
-            <Icon name="play" />
+            <Icon name="play" hasFill />
           </Button>
         </footer>
       </div>
       <Image
         className="hero-card__image"
         src={imgSrc}
-        // width={668}
-        // height={640}
+        width={668}
+        height={640}
       />
     </div>
   )
