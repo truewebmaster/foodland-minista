@@ -60,7 +60,13 @@
     box-shadow: var(--drop-shadow);
   }
 
-  &__title{
+  &__title {
+
+    @include fluid-text(64, 28);
+
+    font-weight: 600;
+    line-height: 1.2;
+
     &:not(:last-child) {
       margin-bottom: 24px;
     }
@@ -84,7 +90,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     &-item {
