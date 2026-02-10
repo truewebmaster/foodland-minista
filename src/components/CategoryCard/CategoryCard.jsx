@@ -8,17 +8,21 @@ export default (props) => {
     title,
     imgSrc,
     link,
-    gradient,
+    color,
   } = props
 
   return (
 
      <a href={link}
        className={clsx('category-card', className)}
-       style={{ backgroundImage: gradient }}
      >
-       <Image className="category-card__image" src={imgSrc} />
-       <h3 className="category-card__title h6">{title}</h3>
+       <div
+         className="category-card__body"
+         style={{ '--categoryCardColor': color }}
+       >
+         <Image className="category-card__image" src={imgSrc} />
+         <h3 className="category-card__title h6">{title}</h3>
+       </div>
      </a>
 
   )

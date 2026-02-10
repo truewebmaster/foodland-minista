@@ -2,20 +2,50 @@
 @use 'sass:math';
 
 @function fluid($max: 100, $min: 10) {
-  $maxViewportWidth: $container-desktop-width;
-  $minViewportWidth: 390;
+  $maxViewportWidth: $container-desktop-width; // например, 1440px
+  $minViewportWidth: 390; // минимальная ширина экрана (px)
 
-  $maxSize: math.div($max, 16);
-  $minSize: math.div($min, 16);
-  $maxWidth: math.div($maxViewportWidth, 16);
-  $minWidth: math.div($minViewportWidth, 16);
+  // Размеры в пикселях (оставляем как есть)
+  $maxSize: $max;
+  $minSize: $min;
 
-  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
-  $yAxisIntersections: -$minWidth * $slope + $minSize;
+  // Ширина вьюпорта в пикселях
+  $maxWidth: $maxViewportWidth;
+  $minWidth: $minViewportWidth;
 
+  // Наклон (изменение размера на 1px ширины экрана)
+  $slope: math.div($maxSize - $minSize, $maxWidth - $minWidth);
+
+  // Базовый размер при 0px ширины (для линейной формулы)
+  $intercept: -$minWidth * $slope + $minSize;
+
+  // Формируем строку clamp() с пикселями
   @return clamp(
-    #{$minSize * 1rem},
-    #{$yAxisIntersections * 1rem} + #{$slope * 100vw},
-    #{$maxSize * 1rem}
+    #{$minSize}px,
+    #{$intercept}px + #{$slope} * 100vw,
+    #{$maxSize}px
   );
 }
+
+
+//@use 'constants' as *;
+//@use 'sass:math';
+//
+//@function fluid($max: 100, $min: 10) {
+//  $maxViewportWidth: $container-desktop-width;
+//  $minViewportWidth: 390;
+//
+//  $maxSize: math.div($max, 16);
+//  $minSize: math.div($min, 16);
+//  $maxWidth: math.div($maxViewportWidth, 16);
+//  $minWidth: math.div($minViewportWidth, 16);
+//
+//  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+//  $yAxisIntersections: -$minWidth * $slope + $minSize;
+//
+//  @return clamp(
+//    #{$minSize * 1rem},
+//    #{$yAxisIntersections * 1rem} + #{$slope * 100vw},
+//    #{$maxSize * 1rem}
+//  );
+//}

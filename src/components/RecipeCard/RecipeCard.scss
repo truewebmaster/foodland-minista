@@ -1,0 +1,14 @@
+.recipe-card {
+  background-image: var(--gradient);
+  border-radius: var(--border-radius);
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px 32px;
+  }
+
+  &__image {
+    border-radius: calc(var(--border-radius) / 3 * 2);
+  }
+}

@@ -1,0 +1,23 @@
+.tags {
+  
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    &__item {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 10px;
+      background-color: var(--color-gray-50);
+      border-radius: var(--border-radius);
+      padding: 8px 16px;
+    }
+
+    &__label {
+      color: var(--color-gray-600);
+    }
+
+
+}
