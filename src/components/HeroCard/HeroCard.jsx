@@ -32,6 +32,7 @@ export default (props) => {
 
         <Tags
           className="hero-card__tags"
+          type="rounded"
           items={tags}
         />
 

@@ -8,12 +8,20 @@ export default (props) => {
   const {
     className,
     items,
+    /**
+     *  '' (default) | 'rounded'
+    */
+    type = '',
     
   } = props
 
   return (
     <div
-      className={clsx('tags', className)}
+      className={clsx(
+        'tags',
+        type === 'rounded' && 'tags--rounded',
+        className
+      )}
     >
 
         <ul className="tags__list">
