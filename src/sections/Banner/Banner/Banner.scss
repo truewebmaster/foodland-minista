@@ -1,0 +1,25 @@
+.banner {
+  padding-block:var(--section-padding-y);
+
+  &__inner {
+    display: flex;
+    gap: 45px;
+    align-items: end;
+  }
+
+  &__body {
+    padding-bottom: 72px;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__description {
+    &:not(:last-child) {
+      margin-bottom: 72px;
+    }
+  }
+}

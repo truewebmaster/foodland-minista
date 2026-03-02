@@ -1,11 +1,13 @@
 .tags {
 
+  --tagsListGapX: 24px;
   --tagsItemBackgroundColor: transparent;
   --tagsItemBorderRadius: 0;
   --tagsItemPadding: 0;
 
 
   &--rounded {
+    --tagsListGapX: 16px;
     --tagsItemBackgroundColor: var(--color-gray-50);
     --tagsItemBorderRadius: var(--border-radius);
     --tagsItemPadding: 8px 16px;
@@ -14,7 +16,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 16px var(--tagsListGapX);
   }
 
   &__item {

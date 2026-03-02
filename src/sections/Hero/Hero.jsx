@@ -1,36 +1,45 @@
 import './Hero.scss'
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
 import HeroCard from "@/components/HeroCard/index.js";
 
 export default () => {
   return (
     <section className="hero" aria-labelledby="hero-title">
-      <div className="hero__slider swiper"
-           data-js-slider={JSON.stringify({
-             effect: 'coverflow',
-             spaceBetween: 120,
-             slidesPerView: 'auto',
-             centeredSlides: true,
-             initialSlide: 1,
-           })}
+      <div
+        className="hero__slider swiper"
+        data-js-slider={JSON.stringify({
+          effect: 'coverflow',
+          spaceBetween: 120,
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          initialSlide: 1,
+          coverflowEffect: {
+            rotate: 10,
+            depth: 50,
+            modifier: 1,
+            slideShadows: false,
+          },
+        })}
       >
         <ul className="hero__slider-list swiper-wrapper">
           <li className="hero__slider-item swiper-slide">
             <HeroCard
               category={{
                 imgSrc: '/src/assets/images/scroll.png',
-                label: 'Hot Recipes'
+                label: 'Hot Recipes',
               }}
-              title = "Spicy delicious chicken wings"
-              titleTag = "h1"
-              description = "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
-              tags ={[
+              title="Spicy delicious chicken wings"
+              titleTag="h1"
+              description="Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
+              tags={[
                 {
                   iconName: 'timer',
-                  label: '30 Minutes'
+                  label: '30 Minutes',
                 },
                 {
                   iconName: 'fork-knife',
-                  label: 'Chicken'
+                  label: 'Chicken',
                 },
               ]}
               author={{
@@ -38,8 +47,8 @@ export default () => {
                 name: 'John Smith',
                 date: {
                   dateTime: '2022-03-15',
-                  label: '15 March 2022'
-                }
+                  label: '15 March 2022',
+                },
               }}
               imgSrc="/src/assets/images/chicken.jpg"
             />
@@ -48,19 +57,19 @@ export default () => {
             <HeroCard
               category={{
                 imgSrc: '/src/assets/images/scroll.png',
-                label: 'Hot Recipes'
+                label: 'Hot Recipes',
               }}
-              title = "Spicy delicious chicken wings"
-              titleTag = "h1"
-              description = "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
-              tags ={[
+              title="Spicy delicious chicken wings"
+              titleTag="h1"
+              description="Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
+              tags={[
                 {
                   iconName: 'timer',
-                  label: '30 Minutes'
+                  label: '30 Minutes',
                 },
                 {
                   iconName: 'fork-knife',
-                  label: 'Chicken'
+                  label: 'Chicken',
                 },
               ]}
               author={{
@@ -68,8 +77,8 @@ export default () => {
                 name: 'John Smith',
                 date: {
                   dateTime: '2022-03-15',
-                  label: '15 March 2022'
-                }
+                  label: '15 March 2022',
+                },
               }}
               imgSrc="/src/assets/images/chicken.jpg"
             />
@@ -78,19 +87,19 @@ export default () => {
             <HeroCard
               category={{
                 imgSrc: '/src/assets/images/scroll.png',
-                label: 'Hot Recipes'
+                label: 'Hot Recipes',
               }}
-              title = "Spicy delicious chicken wings"
-              titleTag = "h1"
-              description = "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
-              tags ={[
+              title="Spicy delicious chicken wings"
+              titleTag="h1"
+              description="Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
+              tags={[
                 {
                   iconName: 'timer',
-                  label: '30 Minutes'
+                  label: '30 Minutes',
                 },
                 {
                   iconName: 'fork-knife',
-                  label: 'Chicken'
+                  label: 'Chicken',
                 },
               ]}
               author={{
@@ -98,8 +107,8 @@ export default () => {
                 name: 'John Smith',
                 date: {
                   dateTime: '2022-03-15',
-                  label: '15 March 2022'
-                }
+                  label: '15 March 2022',
+                },
               }}
               imgSrc="/src/assets/images/chicken.jpg"
             />

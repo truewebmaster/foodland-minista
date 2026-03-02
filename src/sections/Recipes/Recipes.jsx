@@ -2,7 +2,7 @@ import Section from '@/layouts/Section'
 import Grid from "@/components/Grid/index.js";
 import RecipeBanner from "@/components/RecipeBanner/index.js";
 import RecipeCard from "@/components/RecipeCard/index.js";
-import recipes from "./data.json";
+import items from "./data.json";
 
 
 export default () => {
@@ -15,17 +15,13 @@ export default () => {
       <Grid
         columns={3}
       >
-        {recipes.map((recipe) => {
-          const { type, ...rest } = recipe
+        {items.map((item) => {
+          const { type, ...rest } = item
 
           if (type === 'banner') {
-            return (
-              <RecipeBanner {...rest} key={recipe.title} />
-            )
+            return <RecipeBanner {...rest} key={item.title} />
           }
-          return (
-            <RecipeCard {...rest} key={recipe.title} />
-          )
+          return <RecipeCard {...rest} key={item.title} />
         })}
       </Grid>
     </Section>

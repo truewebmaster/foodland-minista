@@ -35,6 +35,10 @@
         var(--categoryCardColorStart) 0%,
         var(--categoryCardColorEnd) 100%
     );
+
+    @include tablet {
+      padding: 0 30px 20px;
+    }
   }
 
 

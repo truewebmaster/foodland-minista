@@ -1,3 +1,39 @@
 .recipe-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 24px;
+  text-align: center;
+  padding: 40px 40px 32px;
+  height: 100%;
+  min-height: 360px;
+  border-radius: var(--border-radius);
+  background:
+    var(--recipeBannerImg) center/auto 100% no-repeat,
+    linear-gradient(to bottom, #367256, #1E483C);
 
+  @include hover {
+    .recipe-banner__title,
+    .recipe-banner__site {
+      color: var(--color-accent);
+    }
+  }
+
+  &__title,
+  &__site {
+    transition-duration: inherit;
+  }
+
+  &__title {
+    color: var(--color-white);
+  }
+
+  &__site {
+    color: color-mix(
+      in srgb,
+      var(--color-white) 60%,
+      transparent
+    );
+  }
 }

@@ -13,29 +13,22 @@ export default (props) => {
     isLiked,
   } = props
 
+  const likeButtonTitle = isLiked ? 'Dislike' : 'Like'
+
   return (
-    <article
-      className={clsx('recipe-card', className)}
-    >
-      <a className="recipe-card__link"
-         href="/"
-      >
+    <article className={clsx('recipe-card', className)}>
+      <a className="recipe-card__link" href="/">
         <Image className="recipe-card__image" src={imgSrc} />
         <h3 className="recipe-card__title h4">{title}</h3>
-        <Tags
-          className="recipe-card__tags"
-          items={tags}
-        />
+        <Tags className="recipe-card__tags" items={tags} />
       </a>
       <button
         type="button"
-        className={clsx (
-          "recipe-card",
-          isLiked && 'is-liked'
-        )}
-        aria-label={isLiked ? 'Dislike' : 'Like'}
+        className={clsx('recipe-card__button', isLiked && 'is-liked')}
+        aria-label={likeButtonTitle}
+        title={likeButtonTitle}
       >
-      <Icon name="heart" hasFill />
+        <Icon name="heart" hasFill />
       </button>
     </article>
   )

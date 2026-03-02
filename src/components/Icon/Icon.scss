@@ -4,6 +4,7 @@
   @include square(var(--iconSize));
 
   display: inline-flex;
+  transition-duration: var(--transition-duration);
 
   svg {
     width: 100%;

@@ -17,7 +17,7 @@ export default (props) => {
       className={clsx('section', 'container', className)}
       aria-labelledby={titleId}
     >
-      <header className="section__header">
+      <header className="section__header section__header--vertical">
         <h2 className="section__title" id={titleId}>
           {title}
         </h2>

@@ -1,5 +1,5 @@
 .recipe-card {
-
+  position: relative;
 
   &__link {
     display: flex;
@@ -11,10 +11,37 @@
   }
 
   &__image {
+    width: 100%;
     border-radius: calc(var(--border-radius) / 3 * 2);
   }
 
   &__tags {
     color: initial;
+  }
+
+  &__button {
+    @include flex-center(true);
+
+    position: absolute;
+    top: 36px;
+    right: 36px;
+    width: 48px;
+    color: var(--color-gray-alt);
+    aspect-ratio: 1;
+    background-color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+
+    @include hover {
+      .icon {
+        transform: scale(110%);
+      }
+
+    }
+
+    &.is-liked {
+      color: var(--color-accent);
+    }
   }
 }

@@ -1,0 +1,17 @@
+.hero__slider {
+
+  .swiper-slide {
+    opacity: 0.4;
+    transition: opacity 1s ease !important;
+  }
+
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    opacity: 0.4;
+  }
+
+  .swiper-slide-active {
+    opacity: 1;
+  }
+
+}
