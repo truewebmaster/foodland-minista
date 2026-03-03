@@ -1,6 +1,7 @@
 import './Hero.scss'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
+import '@/modules/SliderCollections/SliderCollection.scss'
 import HeroCard from "@/components/HeroCard/index.js";
 
 export default () => {
