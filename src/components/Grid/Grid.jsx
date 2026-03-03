@@ -5,8 +5,9 @@ export default (props) => {
   const {
     className,
     children,
-    columns = 1
+    columns = 1,
   } = props
+
   return (
     <ul
       className={clsx(`grid grid--${columns}`, className)}

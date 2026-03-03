@@ -10,6 +10,7 @@ export default () => {
     <Section
       title="Simple and tasty recipes"
       titleId="Move File…"
+      isHeaderVertical
       description="Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
     >
       <Grid

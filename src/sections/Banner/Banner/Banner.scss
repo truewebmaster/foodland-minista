@@ -5,10 +5,25 @@
     display: flex;
     gap: 45px;
     align-items: end;
+
+    @include laptop-s {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include mobile {
+      gap: 25px;
+    }
+
   }
 
   &__body {
     padding-bottom: 72px;
+
+    @include laptop-s {
+      text-align: center;
+      padding-bottom: 50px;
+    }
   }
 
   &__title {
@@ -20,6 +35,10 @@
   &__description {
     &:not(:last-child) {
       margin-bottom: 72px;
+
+      @include laptop-s {
+        margin-bottom: 50px;
+      }
     }
   }
 }
