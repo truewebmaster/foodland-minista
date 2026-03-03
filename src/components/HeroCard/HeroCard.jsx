@@ -30,15 +30,11 @@ export default (props) => {
           <p>{description}</p>
         </div>
 
-        <Tags
-          className="hero-card__tags"
-          type="rounded"
-          items={tags}
-        />
+        <Tags className="hero-card__tags" type="rounded" items={tags} />
 
         <footer className="hero-card__footer">
           <AuthorCard className="hero-card__author" {...author} />
-          <Button className="" href="/">
+          <Button className="hero-card__button" href="/">
             <span>View Recipes</span>
             <Icon name="play" hasFill />
           </Button>

@@ -10,9 +10,6 @@ export default (props) => {
   const {className} = props
 
   return (
-    <div
-      className={clsx('instagram', className)}
-    >
       <Section
         className="instagram"
         title="Check out @foodieland on Instagram"
@@ -32,8 +29,7 @@ export default (props) => {
             <Icon hasFill name="instagram" />
           </Button>
         </div>
-
       </Section>
-    </div>
+
   )
 }

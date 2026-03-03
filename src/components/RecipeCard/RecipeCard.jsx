@@ -8,7 +8,10 @@ export default (props) => {
   const {
     className,
     title,
-    tags,
+    titleExtraClassName = 'h4',
+    // '' - default | 'transparent'
+    mode = '',
+    tags = [],
     imgSrc,
     isLiked,
   } = props
@@ -16,10 +19,12 @@ export default (props) => {
   const likeButtonTitle = isLiked ? 'Dislike' : 'Like'
 
   return (
-    <article className={clsx('recipe-card', className)}>
+    <article
+      className={clsx('recipe-card', className, mode && `recipe-card--${mode}`)}
+    >
       <a className="recipe-card__link" href="/">
         <Image className="recipe-card__image" src={imgSrc} />
-        <h3 className="recipe-card__title h4">{title}</h3>
+        <h3 className={clsx('recipe-card__title', titleExtraClassName)}>{title}</h3>
         <Tags className="recipe-card__tags" items={tags} />
       </a>
       <button

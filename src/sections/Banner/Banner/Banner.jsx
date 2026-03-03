@@ -7,7 +7,7 @@ export default (props) => {
   const { className } = props
 
   return (
-    <div className={clsx('banner', className)}>
+    <section className={clsx('banner', className)}>
       <div className="banner__inner container">
         <div className="banner__body">
           <h2 className="banner__title">
@@ -20,12 +20,10 @@ export default (props) => {
               minim
             </p>
           </div>
-          <Button href="/">
-            Learn More
-          </Button>
+          <Button className="banner__button" href="/">Learn More</Button>
         </div>
         <Image className="banner__image" src="/src/assets/images/q.png" />
       </div>
-    </div>
+    </section>
   )
 }

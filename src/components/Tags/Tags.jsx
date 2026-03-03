@@ -7,13 +7,17 @@ import Icon from "@/components/Icon/index.js";
 export default (props) => {
   const {
     className,
-    items,
+    items = [],
     /**
      *  '' (default) | 'rounded'
     */
     type = '',
     
   } = props
+
+  if (items.length === 0) {
+    return null
+  }
 
   return (
     <div
