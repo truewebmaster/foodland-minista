@@ -6,6 +6,7 @@ import BurgerButton from "@/components/BurgerButton/index.js";
 
 export default (props) => {
   const { url } = props
+
   const menuItems = [
     {label: 'Home', href: '/'},
     {label: 'Recipes', href: '/recipes'},
@@ -21,7 +22,7 @@ export default (props) => {
         <nav className="header__menu" data-js-mobile-overlay="" >
           <ul className="header__menu-list">
             {menuItems.map(({ label, href}) => (
-              <li className="header__menu-item">
+              <li className="header__menu-item" key={label}>
                 <a
                   className={clsx(
                     'header__menu-link',

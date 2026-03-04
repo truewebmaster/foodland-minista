@@ -1,4 +1,6 @@
 .subscribe {
+  padding-block: var(--section-padding-y);
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -8,7 +10,7 @@
     border-radius: var(--border-radius-m);
 
     @include mobile {
-      padding: 20px 20px 80px;
+      padding: 40px 20px 80px;
       border-radius: var(--border-radius);
     }
   }
@@ -21,7 +23,6 @@
 
   &__description {
     max-width: 620px;
-    color: var(--color-gray-600);
 
     &:not(:last-child) {
       margin-bottom: fluid(64, 30);

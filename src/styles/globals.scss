@@ -59,6 +59,10 @@ h6,
   font-weight: 600;
 }
 
+p:not([class]) {
+  color: var(--color-gray-600);
+}
+
 a,
 button,
 label,
@@ -78,6 +82,14 @@ a {
 
   &[class] {
     text-decoration: none;
+  }
+
+  &:not([class]) {
+    color: var(--color-accent);
+
+    &:not(:hover) {
+      text-decoration: none;
+    }
   }
 }
 
